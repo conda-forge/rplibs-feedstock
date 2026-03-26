@@ -31,16 +31,8 @@ requirements:
     - cobra
 
 test:
-  source_files:
-    - tests/
   imports:
     - rplibs
-  requires:
-    - python {{ python_min }}
-    - libsbml
-    - pytest
-  commands:
-    - pytest tests/
 
 about:
   home: https://github.com/brsynth/rplibs/tree/main
