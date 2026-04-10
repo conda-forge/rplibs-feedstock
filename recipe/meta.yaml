@@ -1,5 +1,5 @@
 {% set name = "rplibs" %}
-{% set version = "6.9.1" %}
+{% set version = "6.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,23 @@ package:
 
 source:
   url: https://github.com/brsynth/rplibs/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 300622bf0b0e7af0b9f32e0a5c8c63ccb77f2fd8b80c9f58ca575d38af066e1f
+  sha256: ede380de0090a00b648e4470f2c91870587c4450b4b40debd180c27c72f75b7e
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} setup.py install
 
 requirements:
   host:
     - python {{ python_min }}
     - setuptools
-    - pip
   run:
     - python >={{ python_min }}
     - numpy
     - pandas
     - networkx >=2.5
-    - brs_utils
+    - brs_utils >=1.26.0
     - filetype
     - chemlite
     - rr_cache
