@@ -1,5 +1,5 @@
 {% set name = "rplibs" %}
-{% set version = "6.9.6" %}
+{% set version = "6.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/brsynth/rplibs/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2df6ed74b9a57a1a44a46de52d689fc967046a56e18a85e16f89fbb511216df8
+  sha256: 603a8f66465077ee7608174315a937d484120744a57ae503d7dd965689f7447a
 
 build:
   number: 0
